@@ -3,7 +3,28 @@ Annotations:
          2. @BeforeMethod - The annotated method will be run before each test method.
          3. @AfterMethod -The annotated method will be run after each test method.
 
+        @BeforeMethod  --> pre condition (Ex: set up driver)
+        @Test
+        @AfterMethod  --> post condition (Ex: close the driver)
 
+        @BeforeMethod
+        @Test
+        @AfterMethod
+
+EnableDisable:
+          @Test(enabled = false) temporarily disables a test method without removing it from the codebase
+Priority:
+         @Test(priority= index) - Priority is an attribute that tells TestNG which order the tests need to follow.
+         Starts from index=0 (Highest priority)
+
+DependsOnMethod:
+         @Test(dependsOnMethods = {""}) annotation attribute allows a test method to depend on the successful execution of another test method.
+
+Assertions:
+         1. Assert.assertEquals(actual,expected)
+         2. Assert.assertTrue()
+         Assertions are lines of code that verify if a test has passed or failed by comparing the actual and expected results.
+         They are placed in the test method and act as checkpoints to ensure the test is running as expected.
 
 -------------------------------- NOTES from the class
 Annotations:
